@@ -1,20 +1,21 @@
 import { useState, useEffect, useContext } from "react";
 import { UserContext } from "../context/userContext";
+import { use } from "react";
 
 const AddTransaction = () => {
     const [enableIncome, setEnableIncome] = useState(false);
     const [enableExpense, setEnableExpense] = useState(false);
     const [day, setDay] = useState("");
     const [date, setDate] = useState("");
-    const [expense, setExpense] = useState("");
-    const [income, setIncome] = useState("");
+    const [expense, setExpense] = useState(0);
+    const [income, setIncome] = useState(0);
     const [category, setCategory] = useState("");
     const [note, setNote] = useState("");
-    const [balance, setBalance] = useState("30000")
-    
 
-    const [userData, setUserData] = useContext(UserContext);
-3
+
+    const { userData, setUserData} = useContext(UserContext);
+    3
+    // localStorage.removeItem("userData")
 
     const getDays = (e) => {
         const currentDate = (e.target.value);
@@ -26,18 +27,29 @@ const AddTransaction = () => {
         setDate(currentDate);
     }
 
+
+
     const saveTransaction = () => {
         const allData = {
+            totalBalance: totalBalance,
             income: income,
             expense: expense,
             day: day,
             date: date,
             category: category,
             note: note,
-            balance: balance
         }
-    
-        const userDetail =  [...userData, allData]
+        if (allData.totalBalance < allData.expense) {
+            alert("available not enough to spend!")
+            return;
+        }
+        if (allData.income === 0 && allData.expense === 0 || allData.date === "" || allData.note === "" || allData.category === "") {
+            alert("Fill all mandetory field!")
+            return;
+        }
+
+
+        const userDetail = [...userData, allData]
         setUserData(userDetail);
         localStorage.setItem("userData", JSON.stringify(userDetail));
         console.log(userDetail)
@@ -70,13 +82,16 @@ const AddTransaction = () => {
                     <div className="amount-input-container">
                         <div><p>$</p></div>
                         {
-                            enableIncome ?
-                                <div>
-                                    <input type="number" placeholder="0.00" onChange={(e) => setIncome(e.target.value)} />
-                                </div> :
-                                <div>
-                                    <input type="number" placeholder="0.00" onChange={(e) => setExpense(e.target.value)} />
-                                </div>
+                            enableIncome &&
+                            <div>
+                                <input type="number" placeholder="0.00" onChange={(e) => setIncome(e.target.value)} />
+                            </div>
+                        }
+                        {
+                            enableExpense &&
+                            <div>
+                                <input type="number" placeholder="0.00" onChange={(e) => setExpense(e.target.value)} />
+                            </div>
                         }
                     </div>
                 </div>

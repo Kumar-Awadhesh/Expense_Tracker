@@ -11,8 +11,8 @@
 }
 
 .menu-container{
-    width: max-content;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 
 }
@@ -23,6 +23,7 @@
 
 .navbar{
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
     margin-top: 10px;
     align-items: center;
@@ -73,19 +74,30 @@
     justify-content: space-between;
 }
 
+.recent-activity>h4:hover{
+    cursor: pointer;
+}
+
 .footer{
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
     margin-top: 50px;
     justify-content: space-between;
 }
 
-.footer>img{
+
+
+.footer>img, .footer>div{
     width: 20px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
 }
 
-.footer>img, .footer>div:hover{
+.footer>img:hover, .footer>div:hover{
     cursor: pointer;
+    background-color: grey;
 }
 
 
@@ -93,6 +105,7 @@
 
 .add-transaction{
     display: flex;
+    flex-wrap: wrap;
     width: max-content;
     margin: auto;
     font-family: sans-serif;
@@ -221,4 +234,24 @@
 
 .save-transaction>button:hover{
     cursor: pointer;
+}
+
+
+.activity-container-hide{
+    height: 243px;
+    overflow: hidden;
+    margin-top: 20px;
+
+}
+
+.activity-container-show{
+    margin-top: 20px;
+}
+
+.transaction-container{
+    display: flex;
+    padding: 10px 5px 10px 5px;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    background-color: white;
 }
