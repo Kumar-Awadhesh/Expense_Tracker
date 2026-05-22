@@ -11,7 +11,6 @@ const Dashboard = () => {
   
     useEffect(() => {
         const userDetail = JSON.parse(localStorage.getItem("userData"))
-        console.log(userDetail)
         if(userDetail){
             setUserData(userDetail);
             setBalance(userDetail[userDetail.length - 1].totalBalance)

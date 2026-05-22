@@ -21,7 +21,6 @@ const AddTransaction = () => {
         const currentDay = new Date(currentDate).toLocaleDateString("en-US", {
             weekday: "long"
         })
-        console.log(currentDate)
         setDay(currentDay);
         setDate(currentDate);
     }
@@ -50,7 +49,6 @@ const AddTransaction = () => {
         const userDetail = [...userData, allData]
         setUserData(userDetail);
         localStorage.setItem("userData", JSON.stringify(userDetail));
-        console.log(userDetail)
     }
 
     const incomeBtn = () => {
