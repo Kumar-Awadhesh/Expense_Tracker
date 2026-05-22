@@ -14,8 +14,7 @@ const AddTransaction = () => {
 
 
     const { userData, setUserData} = useContext(UserContext);
-    3
-    // localStorage.removeItem("userData")
+    
 
     const getDays = (e) => {
         const currentDate = (e.target.value);
@@ -31,7 +30,6 @@ const AddTransaction = () => {
 
     const saveTransaction = () => {
         const allData = {
-            totalBalance: totalBalance,
             income: income,
             expense: expense,
             day: day,
