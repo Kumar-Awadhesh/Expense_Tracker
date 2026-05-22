@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+}
+
+.main-container{
+    width: 350px;
+    margin: auto;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    background-color: rgb(231, 243, 243);
+}
+
+.menu-container{
+    width: max-content;
+    display: flex;
+    align-items: center;
+
+}
+
+.menu-container>div:first-child{
+    margin-right: 10px;
+}
+
+.navbar{
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-img>img{
+    width: 30px;
+    border-radius: 50%;
+}
+
+.total-balance{
+    width: max-content;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.turn-over{
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.turn-over>div{
+    width: 40%;
+    padding: 10px;
+    background-color: white;
+}
+
+.spend-analytic{
+    margin: auto;
+    margin-top: 20px;
+    color: white;
+    padding: 20px;
+    background-color: black;
+}
+
+.spend-analytic>p{
+    color: rgb(142, 141, 141);
+}
+
+.recent-activity{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.footer{
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.footer>img{
+    width: 20px;
+}
+
+.footer>img, .footer>div:hover{
+    cursor: pointer;
+}
+
+
+/* ----------------------------------------------Add Transaction Section--------------------------------------------- */
+
+.add-transaction{
+    display: flex;
+    width: max-content;
+    margin: auto;
+    font-family: sans-serif;
+    align-items: center;
+  
+}
+
+.add-transaction>p{
+    margin-right: 10px;
+}
+
+.transaction-btn-container{
+    width: max-content;
+    margin: auto;
+    margin-top: 30px;
+    padding: 3px;
+    background-color: rgb(229, 232, 232);
+}
+
+.transaction-btn-container>button{
+    border: none;
+    outline: none;
+    padding: 5px 10px 5px 10px;
+    
+}
+
+.transaction-btn-container>button:hover{
+    cursor: pointer;
+}
+
+.income-btn{
+    background-color: white;
+}
+
+.expense-btn{
+    background-color: white;
+}
+
+.amount-container{
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.amount-input-container{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+
+.amount-input-container>div>input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.category{
+    width: max-content;
+    margin-top: 50px;
+    font-family: sans-serif;
+    font-size: small;
+}
+
+.category-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    font-family: sans-serif;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.category-container>div>img, b{
+    width: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.category-container>div:last-child>p{
+    margin-top: 15px;
+}
+
+.category-container>div>img:hover, .category-container>div>b:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.category-container>div>p{
+    font-size: x-small;
+}
+
+.date-container{
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+
+.date-container>input{
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    border-bottom: 1px solid lightgray;
+    background-color: transparent;
+}
+
+.date-container>h3{
+    font-size: small;
+}
+
+.save-transaction{
+    margin-top: 50px;
+}
+
+.save-transaction>button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.save-transaction>button:hover{
+    cursor: pointer;
+}
